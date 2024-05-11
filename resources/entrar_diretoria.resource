@@ -12,7 +12,7 @@ ${clickDiretorias}      //span[@class='MuiTypography-root MuiTypography-body1 Mu
 
 *** Keywords ***
 Abrir o navegador 
-    Open Browser    browser=chrome
+    Open Browser    browser=headlesschrome
     Maximize Browser Window
 
 Fechar o navegador

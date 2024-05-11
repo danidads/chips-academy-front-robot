@@ -1,9 +1,9 @@
-name: Academy Frontend Robot
+name: chips-academy-front-robot
 on: push
 jobs:
   test:
     name: Testes de FRONT
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
  
     permissions:
       contents: read
@@ -28,7 +28,7 @@ jobs:
         # run: echo Instalação das depedências do Projeto
         run: |
           pip install robotframework
-          pip install robotframework-selenium
+          pip install robotframework-seleniumlibrary
 
       - name: Executando os testes de FRONT do Robot
         # run: echo Executando os testes de API do Robot
@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: results/
-          
+
       - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v4
